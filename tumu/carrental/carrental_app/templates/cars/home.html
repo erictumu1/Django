@@ -1,0 +1,21 @@
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static "styles/styles.css" %}">
+  </head>
+  <body>
+    <h2>Welcome, {{request.user.username}}!</h2>
+    <br /><br />
+    <div class="forms">
+      <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+        <a href="{% url 'protected' %}">Go to your protected view here!!</a>
+      </form>
+    </div>
+  </body>
+</html>

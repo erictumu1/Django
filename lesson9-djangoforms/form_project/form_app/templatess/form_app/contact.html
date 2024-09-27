@@ -1,0 +1,21 @@
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-us</title>
+    <link rel="stylesheet" href="{% static "styles/styles.css" %}">
+  </head>
+  <body>
+    <h1>Contact us</h1>
+    <form method="POST">
+      {% csrf_token %}
+      <!-- Cross Site Request Forgery. This prevents attacks from hackers. -->
+      {{form.as_p}}
+      <!-- form.as_p is what loads the form file  -->
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

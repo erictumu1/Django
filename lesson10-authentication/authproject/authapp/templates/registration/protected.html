@@ -1,0 +1,26 @@
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protected</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/styles.css' %}"
+    />
+  </head>
+  <body>
+    <div class="form-group">
+      <h2>Protected Page</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet magni
+        accusantium libero. Laudantium, exercitationem veniam delectus explicabo
+        nostrum blanditiis minus expedita, reprehenderit placeat voluptates
+        eligendi nemo similique voluptatibus esse qui?
+      </p>
+      <a href="{% url 'home' %}">Home</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django is awesome</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+  </head>
+  <body>
+    <h1>Welcome to Django</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint
+      voluptates at nam accusamus doloribus iure aperiam repellendus!
+      Consequuntur, veniam quasi eius dicta fugit laudantium eos quibusdam
+      deleniti. Reiciendis, a.
+    </p>
+    <script src="{% static 'js/script.js' %}"></script>
+    <img src="{% static 'images/django.png' %}" alt="Django logo" />
+  </body>
+</html>
